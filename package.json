@@ -1,0 +1,11 @@
+{
+  "name": "lil-kitten-companion",
+  "version": "1.0.0",
+  "description": "Lil' helper for the Kittens game 🐱",
+  "main": "index.js",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarkLeMerise/LilKittenCompanion" 
+  }
+}
