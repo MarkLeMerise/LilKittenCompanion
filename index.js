@@ -374,7 +374,7 @@
 
     const $taskToggleContainer = $('<div class="task-toggle-container" />');
 
-    // Start/stop all autocrafters
+    // Start/stop all buttons
     const $startAll = $('<button>▶️ Start all</button>');
     const $stopAll = $('<button>⏸ Pawse all</button>');
     $taskToggleContainer.append($startAll);
@@ -382,7 +382,7 @@
     $startAll.on('click', () => tasks.forEach(crafter => crafter.start()));
     $stopAll.on('click', () => tasks.forEach(crafter => crafter.pause()));
 
-    // Add autocrafting buttons
+    // Load settings from local storage
     const CONFIG_STORAGE_KEY = 'autokittens.config';
     const allSettings = JSON.parse(localStorage.getItem(CONFIG_STORAGE_KEY)) || {};
 
