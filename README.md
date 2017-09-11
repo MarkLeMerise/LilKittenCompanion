@@ -7,7 +7,7 @@
 ## Installation
 Paste this in your address bar:
 ```
-javascript:(function(){var d=document,s=d.createElement('script');s.src='https://cdn.rawgit.com/MarkLeMerise/LilKittenCompanion/master/index.js';d.body.appendChild(s);})();
+javascript:(function(){var d=document,s=d.createElement('script');s.src='https://cdn.rawgit.com/MarkLeMerise/LilKittenCompanion/f1d6ad2/index.js';d.body.appendChild(s);})();
 ```
 
 ## How to use
