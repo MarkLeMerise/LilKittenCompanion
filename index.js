@@ -343,8 +343,7 @@
 
     const loadTaskFromMemory = (task, settings) => {
         if (!settings) {
-            console.info(`[Autokittens] No settings found for task "${ task.name }" yet.`, task);
-            return task.start();
+            return console.info(`[Autokittens] No settings found for task "${ task.name }" yet.`, task);
         }
 
         if (settings.isActive) {
