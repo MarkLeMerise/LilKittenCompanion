@@ -383,7 +383,7 @@
     $stopAll.on('click', () => tasks.forEach(crafter => crafter.pause()));
 
     // Load settings from local storage
-    const CONFIG_STORAGE_KEY = 'autokittens.config';
+    const CONFIG_STORAGE_KEY = 'kittencompanion.config';
     const allSettings = JSON.parse(localStorage.getItem(CONFIG_STORAGE_KEY)) || {};
 
     tasks.forEach(task => {
