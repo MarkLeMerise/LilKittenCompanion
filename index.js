@@ -360,6 +360,7 @@
         { name: 'slab', icon: '⛰' },
         { name: 'plate', icon: '🔗' },
         { name: 'steel', icon: '⚔️' },
+        { name: 'alloy', icon: '🔩' },
         { name: 'kerosene', icon: '🛢' },
         { name: 'parchment', icon: '📝' },
         { name: 'manuscript', icon: '🗞' },
