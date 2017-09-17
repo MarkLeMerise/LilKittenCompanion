@@ -199,8 +199,8 @@
             });
         }
 
-        setInterval(intervalInMinutes) {
-            this.updateSettings({ interval: intervalInMinutes * 60 });
+        setInterval(intervalInSeconds) {
+            this.updateSettings({ interval: intervalInSeconds });
             this._log(`Interval changed to ${ this._formatTime(this.interval) }.`);
         }
     }
