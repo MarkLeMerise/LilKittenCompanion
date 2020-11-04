@@ -137,14 +137,14 @@
     }
 
     class PeriodicTask extends AsyncTask {
-        constructor(settings, intervalInMinutes = 4) {
-            super(Object.assign({ interval: intervalInMinutes * 60 }, settings));
+        constructor(settings, intervalInSeconds = 300) {
+            super(Object.assign({ interval: intervalInSeconds }, settings));
             this.secondsSinceLastExecution = 0;
 
             // Generate toggle
             this.$toggle.find('.task-label').on('click', () => this.$toggle.toggleClass('show-incrementer'));
-            const $incrementer = $('<input class="task-interval" type="number" max="60" min="1" step="1" />');
-            $incrementer.val(intervalInMinutes);
+            const $incrementer = $('<input class="task-interval" type="number" max="3600" min="5" step="5" />');
+            $incrementer.val(intervalInSeconds);
             $incrementer.on('change', event => this.setInterval(event.currentTarget.value));
             this.$toggle.prepend($incrementer);
             this.$toggle.append('<small class="task-timer" />');
@@ -199,8 +199,8 @@
             });
         }
 
-        setInterval(intervalInMinutes) {
-            this.updateSettings({ interval: intervalInMinutes * 60 });
+        setInterval(intervalInSeconds) {
+            this.updateSettings({ interval: intervalInSeconds });
             this._log(`Interval changed to ${ this._formatTime(this.interval) }.`);
         }
     }
@@ -360,11 +360,13 @@
         { name: 'plate', icon: '🔗' },
         { name: 'steel', icon: '⚔️' },
         { name: 'alloy', icon: '🔩' },
+        { name: 'eludium', icon: 'E' },
         { name: 'kerosene', icon: '🛢' },
         { name: 'parchment', icon: '📝' },
         { name: 'manuscript', icon: '🗞' },
         { name: 'compedium', label: 'compendium', icon: '📖' },
-        { name: 'blueprint', icon: '📘' }
+        { name: 'blueprint', icon: '📘' },
+        { name: 'thorium', icon: 'T' },
     ].map(a => new Autocrafter(a.icon, a.name, a.label));
 
     tasks.push(new Autohunter('🐯', 'hunt'));
